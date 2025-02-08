@@ -1,29 +1,149 @@
 ---
 title: "imcarlyy_OriginalHomeworkCode_01"
-output: html_document
-date: "2025-02-08"
+author: "Carla Rojas"
+date: 02.06.2025
+output: 
+  prettydoc::html_pretty 
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+#Install prettydoc
+install.packages("prettydoc")
+install.packages("rmarkdown")
+install.packages("knitr")
 
-## R Markdown
+#Before anything, install and load the stringr package.
+install.packages("stringr")
+library(stringr)
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+#CHALLENGE 1
 
-```{r cars}
-summary(cars)
-```
+#First step: Create a vector
+sentence <- "Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed."
+sentence
 
-## Including Plots
+#Second step: Remove the punctuation from this sentence.
+sentencewno_punctiation <- gsub("[[:punct:]]","",sentence)
+sentencewno_punctiation
 
-You can also embed plots, for example:
+#Third step: Split the clean sentence (with no punctuation) into words (vectors)
+splited_sentence <- str_split(sentencewno_punctiation," ")[[1]]
+splited_sentence
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
+#Fourth step:Extract every 3rd word from the vector
+every_3rd_element <- splited_sentence[seq(3, length(splited_sentence), by = 3 ) ]
+every_3rd_element
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+#CHALLENGE 2
+
+#You are given a matrix for this first. Look below:
+m <- matrix(data = 1:80, nrow = 8, ncol = 10, byrow = FALSE)
+m
+
+#First step: Given the matrix, m, above, extract the 2nd, 3rd, and 6th columns and assign them to the variable x
+x <- m[,c(2,3,6)]
+x
+
+#Second step: Given the matrix, m, above, extract the 6th to 8th row and assign them to the variable x
+x <- m[6:8,]
+x
+
+#Third step: Given the matrix, m, above, extract the elements from row 2, column 2 to row 6, column 9 and assign them to the variable x
+x <- m[2:6,2:9]
+x
+
+#CHALLENGE 3
+
+#First step: Construct a 4-dimensional, 400 element array (5 x 5 x 4 x 4) named a consisting of the numbers 400 to 1 (i.e., a descending series)
+a <- array(seq(400, 1), dim = c(5, 5, 4, 4))
+a
+
+#Second step: Given this matrix, what would the following return? a[1, 1, 1, 2]
+a[1, 1, 1, 2] 
+
+#Third step: Given this matrix, what would the following return? a[2, 3, 2, ]
+a[2, 3, 2, ]
+
+#Fourth step: Given this matrix, what would the following return? a[1:5, 1:5, 3, 3]
+a[1:5, 1:5, 3, 3]
+
+#CHALLENGE 4
+#First step: Create a list representing this (simplified) primate taxonomy. 
+# -Primates
+#   Haplorhini
+#     Anthropoidea
+#       Platyrrhini
+#         Cebidae
+#         Atelidae
+#         Pitheciidae
+#       Catarrhini
+#         Cercopithecidae
+#         Hylobatidae
+#         Hominidae
+#     Tarsioidea
+#       Tarsiidae
+#
+#   Strepsirhini
+#     Lorisoidea
+#       Lorisidae
+#       Galagidae
+#     Lemuroidea
+#       Cheirogaleidae
+#       Lepilemuridae
+#       Indriidae
+#       Lemuridae
+#       Daubentoniidae
+
+#Creating the Strepsirhini list
+Lemuroidea <- c("Cheirogaleidae", "Lepilemuridae", "Indriidae", "Lemuridae", "Daubentoniidae")
+Lorisoidea <- c("Lorisidae", "Galagidae")
+Strepsirhini <- list(Lemuroidea, Lorisoidea)
+names(Strepsirhini) <- list("Lemuroidea", "Lorisoidea")
+Strepsirhini
+
+
+#Creating the Haplorhini list, first part
+Catarrhini <- c("Cercopithecidae", "Hylobatidae", "Hominidae")
+Platyrrhini <- c("Cebidae", "Atelidae", "Pitheciidae")
+Anthropoidea <- list(Catarrhini, Platyrrhini)
+names(Anthropoidea) <- list("Catarrhini", "Platyrrhini")
+Anthropoidea
+
+
+#Creating the Tarsioidea list (for the Haplorhini list)
+Tarsioidea <- c("Tarsiidae")
+names(Tarsioidea) <- list("Tarsiidae")
+Tarsioidea
+
+
+#Now, I'm making Tarsioidea and Anthropoidea be inside of Haplorhini
+Haplorhini <- list(Tarsioidea, Anthropoidea)
+names(Haplorhini) <- list("Tarsioidea", "Anthropoidea")
+Haplorhini
+
+
+#Here, I'm merging the Haplorhini and Strepsirhini list be in the big primates list
+Primates <- list (Haplorhini, Strepsirhini)
+names(Primates) <- list ("Haplorhini", "Strepsirhini")
+print(Primates)
+
+
+#CHALLENGE 5
+#First step: Store the following numbers as a 5 x 3 matrix, called “m3”: 3, 0, 1 ,23, 1, 2, 33, 1, 1, 42, 0, 1, 41, 0, 2. Be sure to fill the matrix ROW-WISE.
+m3 <- matrix(data= c(3, 0, 1 ,23, 1, 2, 33, 1, 1, 42, 0, 1, 41, 0, 2), nrow= 5, ncol= 3, byrow= TRUE)
+m3
+
+#Second part: Then, coerce the matrix to a data frame.
+dataframed_m3 <-as.data.frame(m3)
+dataframed_m3
+
+#Third part: As a data frame, coerce the second column to be logical-valued
+dataframed_m3[,2] <- as.logical(dataframed_m3[,2])
+dataframed_m3
+
+#Fourth part: As a data frame, coerce the third column to be factor-valued
+dataframed_m3[,3] <- as.factor(dataframed_m3[,3])
+dataframed_m3
+
+#Fifth step:When you are done, use the str() command to show the data type for each variable in your dataframe.
+str(dataframed_m3)
