@@ -150,7 +150,7 @@ pointer-events: auto;
 install.packages(“stringr”)</p>
 <p>library(stringr)</p>
 <div id="challenge-1" class="section level1">
-<h1><strong>#CHALLENGE 1</strong></h1>
+<h1><strong>CHALLENGE 1</strong></h1>
 <p><em>#First step: Create a vector</em></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a>sentence <span class="ot">&lt;-</span> <span class="st">&quot;Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed.&quot;</span></span>
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>sentence</span></code></pre></div>
@@ -171,7 +171,9 @@ words (vectors)</em></p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a>every_3rd_element <span class="ot">&lt;-</span> splited_sentence[<span class="fu">seq</span>(<span class="dv">3</span>, <span class="fu">length</span>(splited_sentence), <span class="at">by =</span> <span class="dv">3</span> ) ]</span>
 <span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>every_3rd_element</span></code></pre></div>
 <pre><code>## [1] &quot;Buck&quot;    &quot;from&quot;    &quot;bearing&quot; &quot;of&quot;      &quot;which&quot;   &quot;and&quot;     &quot;lay&quot;</code></pre>
-<p><strong>#CHALLENGE 2</strong></p>
+</div>
+<div id="challenge-2" class="section level1">
+<h1><strong>CHALLENGE 2</strong></h1>
 <p>#You are given a matrix for this first. Look below:</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="at">data =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">80</span>, <span class="at">nrow =</span> <span class="dv">8</span>, <span class="at">ncol =</span> <span class="dv">10</span>, <span class="at">byrow =</span> <span class="cn">FALSE</span>)</span>
 <span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>m</span></code></pre></div>
@@ -215,7 +217,9 @@ row 2, column 2 to row 6, column 9 and assign them to the variable x</p>
 ## [3,]   12   20   28   36   44   52   60   68
 ## [4,]   13   21   29   37   45   53   61   69
 ## [5,]   14   22   30   38   46   54   62   70</code></pre>
-<p><strong>#CHALLENGE 3</strong></p>
+</div>
+<div id="challenge-3" class="section level1">
+<h1><strong>CHALLENGE 3</strong></h1>
 <p>#First step: Construct a 4-dimensional, 400 element array (5 x 5 x 4
 x 4) named a consisting of the numbers 400 to 1 (i.e., a descending
 series)</p>
@@ -381,13 +385,15 @@ a[1:5, 1:5, 3, 3]</p>
 ## [3,]  148  143  138  133  128
 ## [4,]  147  142  137  132  127
 ## [5,]  146  141  136  131  126</code></pre>
-<p><strong>#CHALLENGE 4</strong> #First step: Create a list representing
-this (simplified) primate taxonomy. # -Primates # Haplorhini #
-Anthropoidea # Platyrrhini # Cebidae # Atelidae # Pitheciidae #
-Catarrhini # Cercopithecidae # Hylobatidae # Hominidae # Tarsioidea #
-Tarsiidae # # Strepsirhini # Lorisoidea # Lorisidae # Galagidae #
-Lemuroidea # Cheirogaleidae # Lepilemuridae # Indriidae # Lemuridae #
-Daubentoniidae</p>
+</div>
+<div id="challenge-4" class="section level1">
+<h1><strong>CHALLENGE 4</strong></h1>
+<p>#First step: Create a list representing this (simplified) primate
+taxonomy. # -Primates # Haplorhini # Anthropoidea # Platyrrhini #
+Cebidae # Atelidae # Pitheciidae # Catarrhini # Cercopithecidae #
+Hylobatidae # Hominidae # Tarsioidea # Tarsiidae # # Strepsirhini #
+Lorisoidea # Lorisidae # Galagidae # Lemuroidea # Cheirogaleidae #
+Lepilemuridae # Indriidae # Lemuridae # Daubentoniidae</p>
 <p>#Creating the Strepsirhini list</p>
 <div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a>Lemuroidea <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Cheirogaleidae&quot;</span>, <span class="st">&quot;Lepilemuridae&quot;</span>, <span class="st">&quot;Indriidae&quot;</span>, <span class="st">&quot;Lemuridae&quot;</span>, <span class="st">&quot;Daubentoniidae&quot;</span>)</span>
 <span id="cb25-2"><a href="#cb25-2" tabindex="-1"></a>Lorisoidea <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Lorisidae&quot;</span>, <span class="st">&quot;Galagidae&quot;</span>)</span>
@@ -458,9 +464,12 @@ primates list</p>
 ## 
 ## $Strepsirhini$Lorisoidea
 ## [1] &quot;Lorisidae&quot; &quot;Galagidae&quot;</code></pre>
-<p>#<strong>CHALLENGE 5</strong> #First step: Store the following
-numbers as a 5 x 3 matrix, called “m3”: 3, 0, 1 ,23, 1, 2, 33, 1, 1, 42,
-0, 1, 41, 0, 2. Be sure to fill the matrix ROW-WISE.</p>
+</div>
+<div id="challenge-5" class="section level1">
+<h1><strong>CHALLENGE 5</strong></h1>
+<p>#First step: Store the following numbers as a 5 x 3 matrix, called
+“m3”: 3, 0, 1 ,23, 1, 2, 33, 1, 1, 42, 0, 1, 41, 0, 2. Be sure to fill
+the matrix ROW-WISE.</p>
 <div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" tabindex="-1"></a>m3 <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="at">data=</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">0</span>, <span class="dv">1</span> ,<span class="dv">23</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">33</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">42</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">41</span>, <span class="dv">0</span>, <span class="dv">2</span>), <span class="at">nrow=</span> <span class="dv">5</span>, <span class="at">ncol=</span> <span class="dv">3</span>, <span class="at">byrow=</span> <span class="cn">TRUE</span>)</span>
 <span id="cb35-2"><a href="#cb35-2" tabindex="-1"></a>m3</span></code></pre></div>
 <pre><code>##      [,1] [,2] [,3]
@@ -505,38 +514,49 @@ data type for each variable in your dataframe.</p>
 ##  $ V1: num  3 23 33 42 41
 ##  $ V2: logi  FALSE TRUE TRUE FALSE FALSE
 ##  $ V3: Factor w/ 2 levels &quot;1&quot;,&quot;2&quot;: 1 2 1 1 2</code></pre>
-<p><em>#Challenge number 1 faced throughout this homework:</em> #1.
-Learning and understand the code needed to extract every ‘certain number
-of elements’ from a vector. In this case, my fourth step, in Challenge
-one, had that code. I knew that this code was important for future
-projects that would have even greater amounts of elements. However, due
-to complexity of the code, it took me a long time to fully understand it
-and use it. I still feel like I don’t know it by memory, but now I feel
-confident enough to figure it out after taking a look at it. I used
-google to understand each part of the code as well.</p>
-<p><em>#Challenge number 2 faced throughout this homework:</em> #One of
-the things I had to deal with doing this homework was when I made
-matrices. For some reason, my R program was defaulted in a way that the
-console width was only up to 80, instead of 100. So when I created the
-matrix for Challenge 2, Module 4, the output that I would see would be 9
-columns next to each other, and the 10th one, at the bottom of them all.
-After googling this information, I also learned that by using the
+</div>
+<div id="my-personal-challenges" class="section level1">
+<h1>MY PERSONAL CHALLENGES</h1>
+<div id="challenge-number-1-faced-throughout-this-homework" class="section level3">
+<h3><em>Challenge number 1 faced throughout this homework:</em></h3>
+<p>#1. Learning and understand the code needed to extract every ‘certain
+number of elements’ from a vector. In this case, my fourth step, in
+Challenge one, had that code. I knew that this code was important for
+future projects that would have even greater amounts of elements.
+However, due to complexity of the code, it took me a long time to fully
+understand it and use it. I still feel like I don’t know it by memory,
+but now I feel confident enough to figure it out after taking a look at
+it. I used google to understand each part of the code as well.</p>
+</div>
+<div id="challenge-number-2-faced-throughout-this-homework" class="section level3">
+<h3><em>Challenge number 2 faced throughout this homework:</em></h3>
+<p>#One of the things I had to deal with doing this homework was when I
+made matrices. For some reason, my R program was defaulted in a way that
+the console width was only up to 80, instead of 100. So when I created
+the matrix for Challenge 2, Module 4, the output that I would see would
+be 9 columns next to each other, and the 10th one, at the bottom of them
+all. After googling this information, I also learned that by using the
 following code, I could set the console width:</p>
 <p>#First, set it with this code: options(width = 100) #Second, create
 your matrix. Mine was this one: # m &lt;- matrix(data = 1:80, nrow = 8,
 ncol = 10, byrow = FALSE) # m</p>
-<p>#Challege number 3 faced throughout this homework:* #On challenge 4,
-I had to work for at least 3 hours on my code to create the Primate’s
-taxonomy. Again, working with a lot of numbers, words and symbols made
-everything very confusing and a little overwhelming for me. Also,
-understanding how to create the code in a way that showed the taxonomy
-in order, and with the proper subdivisions, was hard. I believe that my
-code is correct, but I’m sure there might be another way of writing it
-that makes it look a little more understandable and smooth.</p>
-<p><em>#Challenge number 4 faced throughout this homework:</em>
-#Overall, one of the things that I struggled with a lot, and that made
-things harder and longer for me was the misspelling/overwriting. I kept
-making a lot of mistakes and getting a lot of frustrating ‘error’
+</div>
+<div id="challege-number-3-faced-throughout-this-homework" class="section level3">
+<h3><em>Challege number 3 faced throughout this homework:</em></h3>
+<p>#On challenge 4, I had to work for at least 3 hours on my code to
+create the Primate’s taxonomy. Again, working with a lot of numbers,
+words and symbols made everything very confusing and a little
+overwhelming for me. Also, understanding how to create the code in a way
+that showed the taxonomy in order, and with the proper subdivisions, was
+hard. I believe that my code is correct, but I’m sure there might be
+another way of writing it that makes it look a little more
+understandable and smooth.</p>
+</div>
+<div id="challenge-number-4-faced-throughout-this-homework" class="section level3">
+<h3><em>Challenge number 4 faced throughout this homework:</em></h3>
+<p>#Overall, one of the things that I struggled with a lot, and that
+made things harder and longer for me was the misspelling/overwriting. I
+kept making a lot of mistakes and getting a lot of frustrating ‘error’
 messages that, after checking my code for hours, ended up being a
 misspelling issue. Again, with the amount of things that I had to run
 here, I felt like this was common. The only thing that I learned from
@@ -546,16 +566,19 @@ to check my codes first, and then see if that was the problem, before
 checking anything else. At the beginning, on the contrary, I would only
 think that it was my code’s method and delete everything to run it all
 again :(</p>
-<p><em>#Challenge number 5 faced throughout this homework:</em> #The
-language barrier, both in R and English, made this homework three times
-more difficult. I sometimes wouldn’t understand the coding language, and
-in other ocassions, I would just not understand the explanation/request
-from the module. I think that this is normal and although is not a
-problem that I can solve overnight, I did started doing some things that
-could help me throughout the homeworks, like a vocabulary sheet with all
-the unknown terms, or an additional doc with all the work I’ve done in
-this homework + EXTRA tiny details, in case I forget how I did it/what
-it meant.</p>
+</div>
+<div id="challenge-number-5-faced-throughout-this-homework" class="section level3">
+<h3><em>Challenge number 5 faced throughout this homework:</em></h3>
+<p>#The language barrier, both in R and English, made this homework
+three times more difficult. I sometimes wouldn’t understand the coding
+language, and in other ocassions, I would just not understand the
+explanation/request from the module. I think that this is normal and
+although is not a problem that I can solve overnight, I did started
+doing some things that could help me throughout the homeworks, like a
+vocabulary sheet with all the unknown terms, or an additional doc with
+all the work I’ve done in this homework + EXTRA tiny details, in case I
+forget how I did it/what it meant.</p>
+</div>
 </div>
 </section>
 
