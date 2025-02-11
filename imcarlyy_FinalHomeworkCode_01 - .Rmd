@@ -10,7 +10,7 @@ if (!requireNamespace("stringr", quietly = TRUE))
 
 library(stringr)
 
-# **#CHALLENGE 1**
+# **CHALLENGE 1**
 
 *#First step: Create a vector*
 ```{r echo=TRUE}
@@ -36,7 +36,7 @@ every_3rd_element <- splited_sentence[seq(3, length(splited_sentence), by = 3 ) 
 every_3rd_element
 ```
 
-**#CHALLENGE 2**
+# **CHALLENGE 2**
 
 #You are given a matrix for this first. Look below:
 ```{r echo=TRUE}
@@ -60,7 +60,7 @@ x <- m[2:6,2:9]
 x
 ```
 
-**#CHALLENGE 3**
+# **CHALLENGE 3**
 
 #First step: Construct a 4-dimensional, 400 element array (5 x 5 x 4 x 4) named a consisting of the numbers 400 to 1 (i.e., a descending series)
 ```{r echo=TRUE}
@@ -83,7 +83,7 @@ a[2, 3, 2, ]
 a[1:5, 1:5, 3, 3]
 ```
 
-**#CHALLENGE 4**
+# **CHALLENGE 4**
 #First step: Create a list representing this (simplified) primate taxonomy. 
 # -Primates
 #   Haplorhini
@@ -149,7 +149,7 @@ names(Primates) <- list ("Haplorhini", "Strepsirhini")
 print(Primates)
 ```
 
-#**CHALLENGE 5**
+# **CHALLENGE 5**
 #First step: Store the following numbers as a 5 x 3 matrix, called “m3”: 3, 0, 1 ,23, 1, 2, 33, 1, 1, 42, 0, 1, 41, 0, 2. Be sure to fill the matrix ROW-WISE.
 ```{r}
 m3 <- matrix(data= c(3, 0, 1 ,23, 1, 2, 33, 1, 1, 42, 0, 1, 41, 0, 2), nrow= 5, ncol= 3, byrow= TRUE)
@@ -179,10 +179,11 @@ str(dataframed_m3)
 ```
 
 
-*#Challenge number 1 faced throughout this homework:*
+# MY PERSONAL CHALLENGES
+### *Challenge number 1 faced throughout this homework:*
 #1. Learning and understand the code needed to extract every 'certain number of elements' from a vector. In this case, my fourth step, in Challenge one, had that code. I knew that this code was important for future projects that would have even greater amounts of elements. However, due to complexity of the code, it took me a long time to fully understand it and use it. I still feel like I don't know it by memory, but now I feel confident enough to figure it out after taking a look at it. I used google to understand each part of the code as well. 
 
-*#Challenge number 2 faced throughout this homework:*
+### *Challenge number 2 faced throughout this homework:*
 #One of the things I had to deal with doing this homework was when I made matrices. For some reason, my R program was defaulted in a way that the console width was only up to 80, instead of 100. So when I created the matrix for Challenge 2, Module 4, the output that I would see would be 9 columns next to each other, and the 10th one, at the bottom of them all. After googling this information, I also learned that by using the following code, I could set the console width: 
 
 #First, set it with this code: options(width = 100)
@@ -190,12 +191,12 @@ str(dataframed_m3)
 #     m <- matrix(data = 1:80, nrow = 8, ncol = 10, byrow = FALSE)
 #     m 
 
-#Challege number 3 faced throughout this homework:*
+### *Challege number 3 faced throughout this homework:*
 #On challenge 4, I had to work for at least 3 hours on my code to create the Primate's taxonomy. Again, working with a lot of numbers, words and symbols made everything very confusing and a little overwhelming for me. Also, understanding how to create the code in a way that showed the taxonomy in order, and with the proper subdivisions, was hard. I believe that my code is correct, but I'm sure there might be another way of writing it that makes it look a little more understandable and smooth. 
 
-*#Challenge number 4 faced throughout this homework:*
+### *Challenge number 4 faced throughout this homework:*
 #Overall, one of the things that I struggled with a lot, and that made things harder and longer for me was the misspelling/overwriting. I kept making a lot of mistakes and getting a lot of frustrating 'error' messages that, after checking my code for hours, ended up being a misspelling issue. Again, with the amount of things that I had to run here, I felt like this was common. The only thing that I learned from this was to check my words when running a code and getting an 'error' message. That made things easier at the end because I would take my time to check my codes first, and then see if that was the problem, before checking anything else. At the beginning, on the contrary, I would only think that it was my code's method and delete everything to run it all again :( 
 
-*#Challenge number 5 faced throughout this homework:*
+### *Challenge number 5 faced throughout this homework:*
 #The language barrier, both in R and English, made this homework three times more difficult. I sometimes wouldn't understand the coding language, and in other ocassions, I would just not understand the explanation/request from the module. I think that this is normal and although is not a problem that I can solve overnight, I did started doing some things that could help me throughout the homeworks, like a vocabulary sheet with all the unknown terms, or an additional doc with all the work I've done in this homework + EXTRA tiny details, in case I forget how I did it/what it meant. 
 
